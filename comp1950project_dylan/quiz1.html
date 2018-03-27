@@ -1,0 +1,201 @@
+<!--  
+COMP 1950 GROUP PROJECT
+28 MAR 2018
+MEMBERS: DYLAN TRERISE, MATTHEW WERNER, STEPHEN HULME
+
+THIS DOC: QUIZ EXAMPLE
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous">
+</script>
+  <script type="text/javascript" src="/students/shulme2/groupproject/js/jquery.goup.min.js"></script>
+   <script src="/students/shulme2/groupproject/js/hmwk6_js.js"></script>
+   <script>
+     function validateForm() {
+      alert("Thank you for submitting the quiz. You will now be taken back to the lecture page");
+      return false;
+    }
+   </script>
+  <?php include ('commonhead.php');?>
+
+  <title>QUIZ X</title>
+</head>
+<body>
+</head>
+
+<?php
+  $page = 'quiz1';
+  include ('headernav_prototype.php');
+?>
+
+    <main role="main">
+      <div class="text-center">
+        <h1 class="pb-4 pt-4">QUIZ X</h1>
+        <p class="quiz-instructions ">Make sure to fill in your name and answer all questions.</p>
+        <p class="quiz-instructions pb-3">Hitting the submit button will submit the quiz and take you back to the Lecture X page.</p>
+      </div>
+
+      <div class="container">
+        <form name="quiz_form" action="/students/shulme2/groupproject/lecture1.html" onsubmit="return confirm('Do you really want to submit the form?');" method="post">
+          <div class="form-group pb-3">
+            <div class="form-row">
+              <div class="col">
+                <!--<label for="first-name">First Name:</label>-->
+                <input type="text" class="form-control" id="first-name" placeholder="Enter first name" name="first-name" required>
+              </div>
+              <div class="col">
+                <!-- <label for="last-name">Last name:</label> -->
+                <input type="text" class="form-control" id="last-name" placeholder="Enter last name" name="last-name" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-group pb-2">
+            <legend>Question 1</legend>
+            <p>
+              Morbi ullamcorper neque at libero suscipit, at hendrerit sem aliquet.
+            </p>
+            <input class="form-check-input" type="radio" name="q1" id="q1_1" required> 
+            <label class="form-check-label" for="q1_1">Donec iaculis</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q1" id="q1_2">
+            <label class="form-check-label" for="q1_2">Vestibulum vehicula</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q1" id="q1_3">
+            <label class="form-check-label" for="q1_3">Quisque urna</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q1" id="q1_4">
+            <label class="form-check-label" for="q1_4">Proin porttitor neque</label>
+            <br>
+          </div>
+
+          <div class="form-group pb-2">
+            <legend>Question 2</legend>
+            <p>
+              Morbi ullamcorper neque at libero suscipit, at hendrerit sem aliquet.
+            </p>
+            <input class="form-check-input" type="radio" name="q2" id="q2_1" required>
+            <label class="form-check-label" for="q2_1">Donec iaculis</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q2" id="q2_2">
+            <label class="form-check-label" for="q2_2">Vestibulum vehicula</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q2" id="q2_3">
+            <label class="form-check-label" for="q2_3">Quisque urna</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q2" id="q2_4">
+            <label class="form-check-label" for="q2_4">Proin porttitor neque</label>
+            <br>
+          </div>
+
+          <div class="form-group pb-2">
+            <legend>Question 3</legend>
+            <p>
+              Morbi ullamcorper neque at libero suscipit, at hendrerit sem aliquet.
+            </p>
+            <input class="form-check-input" type="radio" name="q3" id="q3_1" required>
+            <label class="form-check-label" for="q3_1">Donec iaculis</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q3" id="q3_2">
+            <label class="form-check-label" for="q3_2">Vestibulum vehicula</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q3" id="q3_3">
+            <label class="form-check-label" for="q3_3">Quisque urna</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q3" id="q3_4">
+            <label class="form-check-label" for="q3_4">Proin porttitor neque</label>
+            <br>
+          </div>
+
+          <div class="form-group pb-2">
+            <legend>Question 4</legend>
+            <p>
+              Morbi ullamcorper neque at libero suscipit, at hendrerit sem aliquet.
+            </p>
+            <input class="form-check-input" type="checkbox" name="q4" id="q4_1">
+            <label class="form-check-label" for="q4_1">Donec iaculis</label>
+            <br>
+            <input class="form-check-input" type="checkbox" name="q4" id="q4_2">
+            <label class="form-check-label" for="q4_2">Vestibulum vehicula</label>
+            <br>
+            <input class="form-check-input" type="checkbox" name="q4" id="q4_3">
+            <label class="form-check-label" for="q4_3">Quisque urna</label>
+            <br>
+          </div>
+
+          <div class="form-group pb-2">
+            <legend>Question 5</legend>
+            <p>
+              Morbi ullamcorper neque at libero suscipit, at hendrerit sem aliquet.
+            </p>
+            <input class="form-check-input" type="radio" name="q5" id="q5_1" required>
+            <label class="form-check-label" for="q5_1">Donec iaculis</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q5" id="q5_2">
+            <label class="form-check-label" for="q5_2">Vestibulum vehicula</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q5" id="q5_3">
+            <label class="form-check-label" for="q5_3">Quisque urna</label>
+            <br>
+            <input class="form-check-input" type="radio" name="q5" id="q5_4">
+            <label class="form-check-label" for="q5_4">Proin porttitor neque</label>
+            <br>
+          </div>
+
+          <div class="form-group pb-2">
+            <legend>Question 6</legend>
+            <p>
+              Morbi ullamcorper neque at libero suscipit, at hendrerit sem aliquet.
+            </p>
+            <input class="form-check-input" type="checkbox" name="q6" id="q6_1">
+            <label class="form-check-label" for="q6_1">Donec iaculis</label>
+            <br>
+            <input class="form-check-input" type="checkbox" name="q6" id="q6_2">
+            <label class="form-check-label" for="q6_2">Vestibulum vehicula</label>
+            <br>
+            <input class="form-check-input" type="checkbox" name="q6" id="q6_3">
+            <label class="form-check-label" for="q6_3">Quisque urna</label>
+            <br>
+            <input class="form-check-input" type="checkbox" name="q6" id="q6_4">
+            <label class="form-check-label" for="q6_4">Proin porttitor neque</label>
+            <br>
+          </div>
+          <div class="text-center">
+            <input type="submit" value="Submit Quiz" class="btn btn-primary">
+          </div>
+        </form>
+
+      </div>
+
+
+      <div class="bd-example">
+      
+      </div>
+
+<!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>Site created for educational purposes only <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>

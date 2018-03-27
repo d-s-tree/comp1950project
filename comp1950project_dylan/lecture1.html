@@ -1,0 +1,270 @@
+<!--  
+COMP 1950 GROUP PROJECT
+28 MAR 2018
+MEMBERS: DYLAN TRERISE, MATTHEW WERNER, STEPHEN HULME
+
+THIS DOC: LECTURE EXAMPLE PAGE
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous">
+</script>
+  <script type="text/javascript" src="/students/shulme2/groupproject/js/jquery.goup.min.js"></script>
+   <script src="/students/shulme2/groupproject/js/hmwk6_js.js"></script>
+  <?php include ('commonhead.php');?>
+
+  <title>Lecture 1</title>
+</head>
+<body>
+</head>
+
+<?php
+  $page = 'lecture1';
+  include ('headernav_prototype.php');
+?>
+
+    <main role="main">
+
+      <div class="bd-example">
+      <div id="accordion">
+        <section>
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Agenda
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <ul>
+                <li><a href='/students/shulme2/groupproject/quiz1.html'>Quiz X</a></li>
+                <li><a href=#></a>Referencing Stylesheets</a></li>
+                <li><a href=#></a>Importing</a></li>
+                <li><a href=#></a>Fonts</a></li>
+                <li><a href=#></a>Compact CSS</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Referencing Stylesheets
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <ul>
+                  <li>Each stylesheet requires it's own <code>link</code> tag</li>
+                  <li>Multiple stylesheets can be loaded (main.css, fonts.css, layout.css, etc)</li>
+                  <li><code>rel</code> determines how the HTML will use the file linked to (<em>REQUIRED)</em></li>
+                  <li><code>href</code> defines the path, relative or absolute, to the css file (<em>REQUIRED</em>)</li>
+                  <li><code>type</code> attribute is has been deprecated (dropped in HTML5)</li>
+                  <li><code>title</code> attribute allows the user to group stylesheets</li>
+                  <li><code>media</code> attribute allows you to specify what medium this should be viewed in</li>
+                </ul>
+                <pre><code>&lt;link	rel="stylesheet" 
+                    href="http://www.mysite.com/css/styles.css" 
+                    type="text/css" 
+                    title="Main Style" 
+                    media="screen" /&gt;</code>
+                </pre>
+                <div>
+                  <h6>Media variations: <code>media</code> attribute</h6>
+                  <ul>
+                    <li><code>media="type"</code> can be a powerful tool</li>
+                    <li>Examples of media types:  
+                    <ul>
+                      <li><code>all</code> - well supported, commonly used (<em>DEFAULT)</em></li>
+                      <li><code>aural</code></li>
+                      <li><code>braille</code></li>
+                      <li><code>embossed</code></li>
+                      <li><code>handheld</code> - not common (smart phones identify as <code>screen</code>)</li>
+                      <li><code>print</code> - well supported, commonly used</li>
+                      <li><code>projection</code></li>
+                      <li><code>screen</code> - well supported, commonly used</li>
+                      <li><code>tty</code></li>
+                      <li><code>tv</code></li>
+                    </ul>
+                    </li>
+                  
+                    <li>Note that most smart phone devices (iPhones, Andriod, etc) do not identify themselves as media type <code>handheld</code>. The reasoning was that the devices were more than capable of displaying standard web sites, so they identify as <code>screen</code></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Alternate style sheets: <code>rel</code> attribute</h3>
+                  <p>You can also have alternate stylesheets supported</p>
+                  <ul>
+                    <li><code>rel="stylesheet"</code> defines the default stylesheets to use</li>
+                    <li><code>rel="alternate stylesheet"</code> allows different styles to be defined</li>
+                    <li><strong>Tip:</strong> If you have multiple sheets that belong to one "look" make sure they all have the same <code>title</code></li>
+                    <li>You can create alternate style sheets for users, allowing them to select which ones they would like to see</li>
+                    <li>An example would be to create a 'Larger Text' style sheet with everything in a larger font, or providing an option for users to choose an austere, simple page instead of a colorful/image heavy stylesheet</li>
+                    <li>Many browsers are now giving users the ability to select which sheet they would like to see. (Firefox: View &gt; Page Style)  </li>
+                  </ul>
+                </div>
+                <h3>Alternate style sheets: <code>title</code> attribute</h3>
+                  <ul>
+                    <li>A stylesheet is "persistent" if it is linked with <code>rel="stylesheet"</code> and has no <code>title</code> attribute. All persistent stylesheets are always used when rendering</li>
+                    <li>A stylesheet is "preferred" if it is linked with <code>rel="stylesheet"</code> and has a <code>title</code> attribute. these styles will be used as the default. preferred stylesheets with the same title are grouped together</li>
+                    <li>Finally, a stylesheet is "alternate" if it is linked with <code>rel="alternate stylesheet"</code> and has a <code>title</code>. These stylesheets are supposed to allow the user to choose stylesheets, they are grouped together by <code>title</code> and show up in the browser's stylesheet selector if it has one (<code>View &gt; Page Style</code> in Firefox). Each group (by <code>title</code>) is mutually exclusive.</li>
+                  </ul>
+                  <div>
+                    <h4>Persistent Styles</h4>
+                    <p>Persistent styles apply in all cases, even when alternate styles are chosen.</p>
+                    <pre><code>&lt;!-- rel="stylesheet" with NO title="" --&gt;
+                    &lt;link	rel="stylesheet" 
+                      href="css/persistent_styles.css" /&gt;</code></pre>	
+                    <h4>Preferred Styles</h4>
+                    <p>Preferred styles will be the default, but will be replaced if alternate styles are chosen.</p>
+                    <pre><code>&lt;!-- rel="stylesheet" AND a title="" --&gt;
+                    &lt;link	rel="stylesheet" 
+                      href="css/default_styles.css"
+                      title="Standard Styling"	/&gt;</code></pre>	
+                  </div>
+                  <div>
+                    <h4>Alternate Styles</h4>
+                    <p>Alternate styles will not be applied by default, but may be chosen by the user agent. Each alternate stylesheet must have a <code>title=""</code>.</p>
+                    <pre><code>&lt;!-- use rel="alternate stylesheet" for alternative stylesheets... --&gt;
+                    &lt;link	rel="alternate stylesheet" 
+                    href="css/large_text.css"
+                    title="Large Text Styles" /&gt;</code></pre>
+                </div>
+                <div>
+                  <h4>Grouping Stylesheets</h4>
+                  <p>If more than one link tag shares the same <code>title=""</code> then they will be grouped together.</p>
+                  <pre><code>&lt;-- group stylesheets with shared title="" --&gt;
+                    &lt;link	rel="alternate stylesheet" 
+                    href="css/monchrome_layout.css"
+                    title="Monochrome Styles"	/&gt;
+                    &lt;link	rel="alternate stylesheet" 
+                    href="css/monchrome_fonts.css"
+                    title="Monochrome Styles" 	/&gt;</code></pre>
+                    <p>To enable alternate stylesheet switching, you can either apply some javascript to manage the switch with hyperlinks, or use <a href="https://support.mozilla.org/en-US/questions/841578">Firefox for alternate stylesheets</a>.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  @charset: Assigning CSS Character Set
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              <p>If your CSS files only contain standard keyboard characters, assigning the character set is not required. The CSS language itself does not use any exotic characters, so assigning a charset is often omitted. If, however, your CSS needs to use special characters, ensuring the correct character set can be very important. Eg: When using a pseudoclass to add content to HTML <code>content: "Äwesome!"</code></p>
+
+              <p>If needed, add the <code>@charset</code> rule to the top of the CSS document.</p>
+              <pre><code>/* assign charset at top of .css file */
+              @charset "utf-8";
+              
+              /* CSS rules follow... */
+              </code></pre> 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                    @font-face And Font Servers
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                  <p>Fonts that aren't available on the client machine can be provided by a third-party font server or by your website's server.</p>
+                  <ul>
+                    <li><a href="https://fonts.google.com/">Google Fonts</a></li>	
+                    <li><a href="https://typekit.com/">Adobe Typekit</a></li>	
+                    <li><a href="https://www.fontsquirrel.com/">Font Squirrel</a></li>	
+                    <li>Plenty more available online...</li>	
+                  </ul>
+                  <h3>Third Party Font Server</h3>
+                  <p>Browse the font server site, select the fonts you like and they wil provide you with code for a <code>&lt;link /&gt;</code> tag to add to your HTML. You can then use the font in your CSS.</p>
+                  
+                  <pre><code>&lt;!-- add the link tag to the HTML --&gt;
+                &lt;link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet" /&gt;	
+                
+                /* use the font in the CSS */
+                selector{
+                  font-family: 'Bungee', cursive;
+                }</code></pre>
+                  <p class="bungee">No longer stuck with 'Arial', 'Helvetica', 'Georgia' and the rest.</p>
+                  <h3>Serve Fonts From Your Website</h3>
+                  <p>If the font(s) are copyright free, or if you have license to distribute a font, you can serve them yourself using the CSS <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</a></code> directive.</p>
+                  <p>Different client systems will need fonts in varying formats, so if you are distributing the font yourself, be sure to have the font available in most common formats.</p>
+                  <ul>
+                    <li>Obtain the font(s) you wish to use. You must either have license to distribute the font or the font must be copyright free. </li>	
+                
+                    <li>Upload your font(s) to a <a href="https://www.fontsquirrel.com/tools/webfont-generator">Font Generator</a> to obtain a font kit including various formats for the font(s)</li>
+                    <li>Uncompress the font kit and locate it somewhere with your website files</li>
+                    <li>Use <code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face">@font-face</a></code> to load the fonts. The font-kit generated by Squirrel Font will include some same CSS to help you with the sometimes volumous coding</li>
+                    <li>Apply the new font in CSS</li>
+                  </ul>
+                
+                <pre><code>/* load the font in CSS */
+                @font-face {
+                    font-family: 'alex_brushregular';
+                    src: url('/fonts/alexbrush-regular-webfont.woff2') format('woff2'),
+                         url('/fonts/alexbrush-regular-webfont.woff') format('woff'), 
+                   url('/fonts/alexbrush-regular-webfont.ttf') format('tff');
+                }
+                
+                /* use the font in CSS */
+                selector{	
+                  font: bold 20px alex_brushregular ;
+                  color:#555;
+                }</code></pre>	
+                  <p class="fontsquirrel">Don't get carried away with wild font choices. Some fonts have very poor readability, reducing accessibility.</p>
+                  <p><strong>NOTE:</strong> Include <code>@font-face</code> before rules that use the font.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      </div>
+
+<!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>Site created for educational purposes only <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>
