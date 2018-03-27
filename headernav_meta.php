@@ -13,7 +13,7 @@
         -->
 
         <li class="<?php echo ($page == "prototype" ? "active nav-item" : "nav-item")?>">
-          <a class="nav-link" href="/students/shulme2/groupproject/lecture1.html">Prototype Site</a>
+          <a class="nav-link bg-primary text-light font-weight-bold mt-2 mb-2 pl-2 pr-2" href="/students/shulme2/groupproject/lecture1.html">Redesign Prototype Site</a>
         </li>
         <!-- Example disabled class
         <li class="nav-item">

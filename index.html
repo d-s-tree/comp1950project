@@ -1,95 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <script
-src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous">
-</script>
-  <script type="text/javascript" src="/students/shulme2/groupproject/js/jquery.goup.min.js"></script>
-   <script src="/students/shulme2/groupproject/js/hmwk6_js.js"></script>
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script src="/students/shulme2/groupproject/js/scrollup.js"></script>
   <?php include ('commonhead.php');?>
-  <title>Document</title>
-  </head>
-
+  <link rel="stylesheet" href="/students/shulme2/groupproject/css/metastyle.css" crossorigin="anonymous">
+  <title>Project Meta Site | COMP1950 Group Project</title>
+</head>
   <body>
-  <?php
-    $page = 'home';
-    include ('headernav_meta.php');
-
-  ?>
-
+    <?php
+      $page = 'home';
+      include ('headernav_meta.php');
+    ?>
+    <button class="nav-link bg-primary text-light font-weight-bold p-4" id="scrollBtn" title="Go to top">Top</button>
     <main role="main">
-
-<!-- My comment goes here -->
 
       <!-- Marketing messaging and featurettes
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container marketing">
+      <div class="container marketing p-0">
 
         <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
 
+        <section class="row pl-3 pr-3">
+          <div class=" col-lg-12 d-flex justify-content-center mb-5">
+            <h2 class="display-3 text-center text-uppercase font-weight-bold text-primary">Meet the Team</h2>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="/students/shulme2/groupproject/images/shulme.png" alt="headshot of Stephen Hulme" />
+            <h2 class="font-weight-bold">Stephen Hulme</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-success" href="https://www.linkedin.com/in/sjhulme/" target="_blank" role="button">LinkedIn Profile &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="/students/shulme2/groupproject/images/dtrerise.png" alt="headshot of dylan trerise" />
+            <h2 class="font-weight-bold">Dylan Trerise</h2>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-success" href="https://www.linkedin.com/in/dylantrerise/"  target="_blank" role="button">LinkedIn Profile &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="/students/shulme2/groupproject/images/mwerner.png" alt="headshot of matthew werner" />
+            <h2 class="font-weight-bold">Matthew Werner</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-success" href="https://www.linkedin.com/in/matthew-werner/" target="_blank" role="button">LinkedIn Profile &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </section><!-- /.row -->
 
         <!-- START THE FEATURETTES -->
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <section class="row featurette bg-light pl-3 pr-3">
+          <div class="col-md-12">
+            <h2 class="featurette-heading font-weight-bold text-uppercase mt-0 text-primary">Proposed Site Map</h2>
+            <h3 class="featurette-heading text-muted mt-0">The Information Architecture</h3>
           </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
+          <figure class="col-md-12">
+            <img class="img-fluid mt-5" src="/students/shulme2/groupproject/images/site_map.png" alt="headshot of matthew werner" />
+            <figcaption>A mockup of the proposed site architecture.</figcaption>
+          </figure>
+        </section>
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <section class="row featurette pl-3 pr-3">
+          <div class="col-md-12">
+            <h2 class="featurette-heading font-weight-bold text-uppercase mt-0 text-primary">The Plan of Attack</h2>
+            <h3 class="featurette-heading text-muted mt-0">Our Proposed Site Improvements</h3>
+            <p class="lead">With the combined efforts of our team, we will implement several new improvements for the current COMP 1950 website in order to bring it forward to modern day web standards.</p>
+            <p>With the implementation of HTML5 as the new W3C recommendation in 2014, re-working the COMP 1950 website utilizing HTML5 standards was a must do. We will utilize a BootStrap framework which will give us a solid foundation of both HTML5, CSS3 and jQuery functionality. Our layout and design use the new HTML5 tags throughout giving the webpage content greater semantic meaning than it had previously. This increased semantic meaning will allow for search engines to better interpret the content of the page which in turn will result in improved rankings on search engine algorithms.</p>
+            <p>Receiving an error 404 is never a positive experience for a user, but with a bit of work the experience can be improved. Our webpage will have a custom error 404 page implemented. This page will be branded appropriately to match the style and feel of the other website pages and will include several links that will properly lead the user to functioning pages and hopefully toward the content they were originally trying to reach. Because users will be more likely to click through links on our custom 404 page instead of hitting the back button immediately, our Search Engine Optimization (SEO) will likely be improved as well.</p>
+            <p>Occasionally users will desire a hard copy of the website content. A poorly print-styled page can lead to a negative user experience. Our pages will utilize unique styles specific to print jobs, ensuring that any unnecessary information (navigations, images not related to the main content, unnecessary colours, etc.) are excluded from the printout and content (paragraphs, images) are not cutting across page breaks.</p>
+            <p>Typically, websites will have certain styles that remain constant across all pages on a site. These are typically headers, navigations, and footers. If changes are needed to any of these sections, usually they need to be made on all pages. While not too concerning for websites with one or two pages, this can become problematic and time-consuming when working with websites with a larger number of pages. To resolve this, our page will use PHP scripting to insert the common sections of our webpage. With this implementation, it will ensure that if any changes are needed to be made to any of these sections in the future, they will only need to be made once to the master version being inserted to all through PHP.</p>
+            <p>A primary pain point about the current COMP 1950 website was the inability to quickly jump to the necessary section on a given lecture page. While bookmarks are present at the top of the page for fast navigation, if you are mid-page it requires scrolling back up to see the bookmarks or scroll through the page manually to find the information needed. To improve upon this experience, we have decided on one implementation through jQuery. This improvement is to implement ‘accordion-style’ sections. Each heading on a lecture page will denote a section. When first visiting a lecture page, all these sections will be collapsed, and the content that is usually seen under them will not be initially visible. As the content is collapsed, the user will be able to see most of (if not all) of the section headings. When clicked, these sections will expand, and the content will be visible. When clicked again, the content will collapse. This feature will ensure that all headings will be typically visible to the user and thus easier to find its current form. A secondary implementation that we believe will make the navigation of content easier for the user is a fixed header navigation at the top of the page. With this, users will be able to quickly access the links to any of the other lectures or pages on the site without the need of scrolling back to the top of the page.</p>
+            <p>Over the past few decades search engine’s have become more and more refined in assessing webpages and ranking them accordingly. We will attempt to optimize our new webpage with the best practices regarding search engine rankings. This will include:</p>
+            <ol>
+              <li>Having well-structured page titles, accurately describing the page in a brief statement.</li>
+              <li>Utilizing the ‘description’ meta tag, and ensuring that it is a accurate summary of the page content.</li>
+              <li>Including a site map.</li>
+              <li>As mentioned earlier, including a custom-made error 404 page.</li>
+              <li>A respectable page load time.</li>
+              <li>Well-structured page URLs that make the page hierarchy easy to understand and follow.</li>
+            </ol>
+            <p>Online quizzes will also be implemented into the website, increasing its functionality. The links to these quizzes will be found directly on the lecture pages and will be formatted as a form in a visually pleasing way. Validators will be added throughout the form to ensure certain questions (such as multiple choice) cannot be left unfilled, and users will be redirected to a ‘form completed’ page on submission.</p>
           </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
+        </section>
 
         <hr class="featurette-divider">
 
@@ -97,11 +97,9 @@ crossorigin="anonymous">
 
       </div><!-- /.container -->
 
-
       <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      <footer class="d-flex justify-content-between align container pt-5 pb-5 bg-dark">
+        <p class="d-flex align-items-center m-0 text-white">&copy; 2017-2018</p>
       </footer>
     </main>
 
