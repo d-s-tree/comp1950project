@@ -8,7 +8,8 @@
   </script>
   <script src="/students/shulme2/groupproject/js/scrollup.js"></script>
   <?php include ('commonhead.php');?>
-  <link rel="stylesheet" href="/students/shulme2/groupproject/css/metastyle.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/students/shulme2/groupproject/css/metastyle.css" media="screen" />
+  <meta name="description" content="The COMP 1950 group project meta page is designed to provide an overview of the proposed changes and design philosophy for our group's vision of the COMP 1950 website." />
   <title>Project Meta Site | COMP1950 Group Project</title>
 </head>
   <body>
@@ -61,7 +62,7 @@
             <h3 class="featurette-heading text-muted mt-0">The Information Architecture</h3>
           </div>
           <figure class="col-md-12">
-            <img class="img-fluid mt-5" src="/students/shulme2/groupproject/images/site_map.png" alt="headshot of matthew werner" />
+            <img class="img-fluid mt-5" src="/students/shulme2/groupproject/images/site_map2.png" alt="headshot of matthew werner" />
             <figcaption>A mockup of the proposed site architecture.</figcaption>
           </figure>
         </section>
@@ -73,11 +74,17 @@
             <h2 class="featurette-heading font-weight-bold text-uppercase mt-0 text-primary">The Plan of Attack</h2>
             <h3 class="featurette-heading text-muted mt-0">Our Proposed Site Improvements</h3>
             <p class="lead">With the combined efforts of our team, we will implement several new improvements for the current COMP 1950 website in order to bring it forward to modern day web standards.</p>
-            <p>With the implementation of HTML5 as the new W3C recommendation in 2014, re-working the COMP 1950 website utilizing HTML5 standards was a must do. We will utilize a BootStrap framework which will give us a solid foundation of both HTML5, CSS3 and jQuery functionality. Our layout and design use the new HTML5 tags throughout giving the webpage content greater semantic meaning than it had previously. This increased semantic meaning will allow for search engines to better interpret the content of the page which in turn will result in improved rankings on search engine algorithms.</p>
-            <p>Receiving an error 404 is never a positive experience for a user, but with a bit of work the experience can be improved. Our webpage will have a custom error 404 page implemented. This page will be branded appropriately to match the style and feel of the other website pages and will include several links that will properly lead the user to functioning pages and hopefully toward the content they were originally trying to reach. Because users will be more likely to click through links on our custom 404 page instead of hitting the back button immediately, our Search Engine Optimization (SEO) will likely be improved as well.</p>
+            <h4>HTML5 Upgrades</h4>
+            <p>With the implementation of HTML5 as the new W3C recommendation in 2014, re-working the COMP 1950 website utilizing HTML5 standards was at the top of our list for new implementations. We will utilize a BootStrap framework which will give us a solid foundation of HTML5, CSS3 and jQuery functionality as well as mobile-friendly responsive design with grid layouts. Our layout and design will use the new HTML5 tags on all website pages which will give the content greater semantic meaning than it had previously. This increased semantic meaning will allow for search engines to better interpret the content of the page which will result in improved rankings on search engine algorithms. It will also improve the user experience for those visually impaired as screen readers will be able to interpret the page content with more ease.</p>
+            <h4>.htaccess and Custom Error 404</h4>
+            <p>Receiving an error 404 is never a positive experience for a user, but with a few adjustments the experience can be improved and contribute to the site’s overall functionality. Rather than relying on the default Error 404 page, our website will implement our own custom error 404 page. This page will be branded appropriately to match the style and feel of the rest of the website and will include several links that will properly lead the user to functioning pages and hopefully toward the content they were originally trying to reach. The well-styled and branded will coax users to stick around, examine the page, and potentially click through the provided links instead of leaving the page immediately upon arrival. Because users will be more likely to click through links on this page, our Search Engine Optimization (SEO) will likely be improved as well.</p>
+            <h4>Printer Styles</h4>
             <p>Occasionally users will desire a hard copy of the website content. A poorly print-styled page can lead to a negative user experience. Our pages will utilize unique styles specific to print jobs, ensuring that any unnecessary information (navigations, images not related to the main content, unnecessary colours, etc.) are excluded from the printout and content (paragraphs, images) are not cutting across page breaks.</p>
-            <p>Typically, websites will have certain styles that remain constant across all pages on a site. These are typically headers, navigations, and footers. If changes are needed to any of these sections, usually they need to be made on all pages. While not too concerning for websites with one or two pages, this can become problematic and time-consuming when working with websites with a larger number of pages. To resolve this, our page will use PHP scripting to insert the common sections of our webpage. With this implementation, it will ensure that if any changes are needed to be made to any of these sections in the future, they will only need to be made once to the master version being inserted to all through PHP.</p>
-            <p>A primary pain point about the current COMP 1950 website was the inability to quickly jump to the necessary section on a given lecture page. While bookmarks are present at the top of the page for fast navigation, if you are mid-page it requires scrolling back up to see the bookmarks or scroll through the page manually to find the information needed. To improve upon this experience, we have decided on one implementation through jQuery. This improvement is to implement ‘accordion-style’ sections. Each heading on a lecture page will denote a section. When first visiting a lecture page, all these sections will be collapsed, and the content that is usually seen under them will not be initially visible. As the content is collapsed, the user will be able to see most of (if not all) of the section headings. When clicked, these sections will expand, and the content will be visible. When clicked again, the content will collapse. This feature will ensure that all headings will be typically visible to the user and thus easier to find its current form. A secondary implementation that we believe will make the navigation of content easier for the user is a fixed header navigation at the top of the page. With this, users will be able to quickly access the links to any of the other lectures or pages on the site without the need of scrolling back to the top of the page.</p>
+            <h4>PHP Scripting for Common Sections</h4>
+            <p>Typically, websites will have certain styles that remain constant across all pages on a site. These often include the headers, navigations, and footers. If changes are needed to any of these sections, they will need to be made on all pages. While not too concerning for websites with one or two pages, this can become problematic and time-consuming when working with websites with a larger number of pages. To resolve this, our website will use PHP scripting to insert the common sections of our webpage from a single master version. With this implementation, it will ensure that if any changes are needed to be made to these sections in the future, they will only need to be made once to the master version being inserted to all through PHP.</p>
+            <h4>Accordion Style Sections and Scroll Up JS Functionality</h4>
+            <p>A primary pain point concerning the current COMP 1950 website was the inability to quickly navigate to the desired section when browsing one of the lecture pages. While bookmarks are present at the top of the page for fast navigation, if you are mid-page it requires scrolling back up to see the bookmarks or scrolling through the page manually to find the information needed. To improve upon this experience, we have decided on three implementations. The first improvement is to implement ‘accordion-style’ sections. Each heading on a lecture page will denote a section. When first visiting a lecture page, all these sections will be collapsed, and the content that is usually seen under them will not be initially visible. As the content is collapsed, the user will be able to see most of (if not all) of the section headings. When clicked, these sections will expand, and the content will be visible. When clicked again, the content will collapse. This feature will ensure that all headings will be typically visible to the user and thus easier to find its current form. The second implementation is a button that will allow the user to click and scroll back to the top of the page at any time. This feature is implemented through JavaScript and operates in a similar manner to bookmarks. It’s more useful however as it is available at any point on the page rather than at fixed locations. It will be fixed to the bottom right of the page and will not be visible to the user until they scroll down the page. The third implementation that we believe will make the navigation of content easier for the user is a fixed header navigation at the top of the page. With this, users will be able to quickly access the links to any of the other lectures or pages on the site without the need of scrolling back to the top of the page.</p>
+            <h4>Other SEO Considerations</h4>
             <p>Over the past few decades search engine’s have become more and more refined in assessing webpages and ranking them accordingly. We will attempt to optimize our new webpage with the best practices regarding search engine rankings. This will include:</p>
             <ol>
               <li>Having well-structured page titles, accurately describing the page in a brief statement.</li>
@@ -87,7 +94,10 @@
               <li>A respectable page load time.</li>
               <li>Well-structured page URLs that make the page hierarchy easy to understand and follow.</li>
             </ol>
+            <h4>Integrated Online Quiz Functionality</h4>
             <p>Online quizzes will also be implemented into the website, increasing its functionality. The links to these quizzes will be found directly on the lecture pages and will be formatted as a form in a visually pleasing way. Validators will be added throughout the form to ensure certain questions (such as multiple choice) cannot be left unfilled, and users will be redirected to a ‘form completed’ page on submission.</p>
+            <h4>Other Site Implementations</h4>
+            <p>While not integrated into the current version of the website due to time constraints, there were other functionalities that we believe would improve the user experience if implemented. A global search bar could be beneficial to search content across the entire site, allowing users to quickly pinpoint key words or phrases that they may want to read about but can’t remember where it is located or can’t find with the given navigation headers..</p>
           </div>
         </section>
 
@@ -98,8 +108,8 @@
       </div><!-- /.container -->
 
       <!-- FOOTER -->
-      <footer class="d-flex justify-content-between align container pt-5 pb-5 bg-dark">
-        <p class="d-flex align-items-center m-0 text-white">&copy; 2017-2018</p>
+      <footer class="d-flex justify-content-between container pt-5 pb-5 bg-dark">
+        <p class="d-flex align-items-center m-0 text-white font-weight-bold">&copy; 2017-2018</p>
       </footer>
     </main>
 
