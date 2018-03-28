@@ -13,7 +13,7 @@
         -->
 
         <li class="<?php echo ($page == "prototype" ? "active nav-item" : "nav-item")?>">
-          <a class="nav-link bg-primary text-light font-weight-bold mt-2 mb-2 pl-2 pr-2" href="/students/shulme2/groupproject/lecture1.html">Redesign Prototype Site</a>
+          <a class="nav-link bg-primary text-light font-weight-bold mt-2 mb-2 pl-2 pr-2" href="/students/shulme2/groupproject/course_home.html">Redesign Prototype Site</a>
         </li>
         <!-- Example disabled class
         <li class="nav-item">
@@ -21,10 +21,7 @@
         </li>
       -->
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <span class="navbar-text text-white font-weight-bold pl-2">Project Meta Site | COMP 1950 Group Project</span>
     </div>
   </nav>
 </header>
