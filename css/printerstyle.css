@@ -66,3 +66,83 @@ main{
     margin-top: 7rem;
   }
 }
+
+/*------------------*/
+
+
+@media print {
+
+/*clear global styles*/
+/*------------------*/
+
+body, #content, main, footer  {
+		
+	/* floating is not advised for printers */
+	float: none;
+	
+	/* let the printer set margins */
+	width: auto;
+	margin: 0;
+	padding: 0;
+	
+	/* dont display background colors or images */
+	background: none;
+}
+
+#accordion{
+	margin-top: 50px;
+}
+
+.collapse {
+    display: block !important;
+    height: auto !important;
+}
+
+/* hide sections of no use to printer */
+header, nav, footer, .sform-inline mt-2 mt-md-0, footer.container, footer p{
+	display: none !important; 
+}
+
+/*------------------*/
+
+body, #content, main, footer  {
+		
+	/* floating is not advised for printers */
+	float: none;
+	
+	/* let the printer set margins */
+	width: auto;
+	margin: 0;
+	padding: 0;
+	
+	/* dont display background colors or images */
+	background: none;
+}
+
+/*---------------------------*/
+
+
+/* to prevent ending a page with a heading! */
+h1, .featurette, h4, h5, h6{ 	
+	position: relative; 
+	page-break-before: always;	}
+
+/*---------------------------*/
+
+/* force black serif text, which is ideal for printouts */
+body, #content, , main, footer {
+	color: black;
+	background:none; 
+	font: 16pt Georgia, "Times New Roman", Serif;
+}
+
+}
+
+
+
+
+
+
+
+
+
