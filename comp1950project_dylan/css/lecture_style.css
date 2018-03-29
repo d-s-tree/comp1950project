@@ -113,7 +113,21 @@ h5 .btn {
   font-size: 2rem !important;
 }
 
-.card h6 {
+.card h6, .card h3 {
   font-size: 1.5rem !important;
   color: #686868 !important;
+}
+
+/* QUIZ STYLES */
+
+.btn-primary {
+  color: #fff400 !important;
+  border-color: #fff400 !important; 
+  background-color: #003e6b !important;
+}
+
+.btn-primary.btn-outline-success:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.btn-outline-success:active:focus, .open>.dropdown-toggle.btn-primary {
+  color: #fff !important;
+  background-color: #686868 !important;
+  border-color: #686868 !important; /*set the color you want here*/
 }
