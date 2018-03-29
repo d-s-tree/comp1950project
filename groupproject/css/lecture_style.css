@@ -1,0 +1,152 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  color: #5a5a5a;
+}
+
+main{
+  margin-top:15px;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+#scrollBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+/* CUSTOM COLORS */
+/* 
+dark blue: #003e6b
+dark grey: #323232 
+med grey: #686868
+yellow: #fff400 
+whiteish: #f2f2f2
+
+
+*/
+
+/* NAV CUSTOM COLORS */
+.bg-dark {
+  background-color: #323232 !important;
+}
+
+.btn-outline-success {
+  color: #f2f2f2 !important;
+  border-color: #f2f2f2 !important; 
+}
+
+.btn-outline-success:hover, .btn-outline-success:focus, .btn-outline-success:active, .btn-outline-success.active, .btn-outline-success:active:focus, .open>.dropdown-toggle.btn-outline-success {
+  color: #fff;
+  background-color: #686868 !important;
+  border-color: #686868 !important; /*set the color you want here*/
+}
+
+/* FORM CUSTOM COLORS */
+.form-control {
+  color: #323232 !important;
+}
+
+/* MAIN STYLES */
+
+.display-3 {
+  color: #003e6b !important;
+}
+
+h5 .btn-link {
+  color: #323232 !important;
+}
+
+h5 .btn {
+  font-size: 2rem !important;
+}
+
+.card h6, .card h3 {
+  font-size: 1.5rem !important;
+  color: #686868 !important;
+}
+
+/* QUIZ STYLES */
+
+.btn-primary {
+  color: #fff400 !important;
+  border-color: #fff400 !important; 
+  background-color: #003e6b !important;
+}
+
+.btn-primary.btn-outline-success:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.btn-outline-success:active:focus, .open>.dropdown-toggle.btn-primary {
+  color: #fff !important;
+  background-color: #686868 !important;
+  border-color: #686868 !important; /*set the color you want here*/
+}
+
+@media (max-width: 620px) {
+  footer{
+    flex-direction: column;
+    align-items: center;
+  }
+  h5 .btn {
+    font-size: 1rem !important;
+  }
+}

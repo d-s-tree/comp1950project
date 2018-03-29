@@ -1,0 +1,75 @@
+<!--  
+COMP 1950 GROUP PROJECT
+28 MAR 2018
+MEMBERS: DYLAN TRERISE, MATTHEW WERNER, STEPHEN HULME
+
+THIS DOC: ERROR PAGE
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous">
+</script>
+  <?php include ('commonhead.php');?>
+  <link rel="stylesheet" href="/students/mwerner2/groupproject/css/lecture_style.css" crossorigin="anonymous">
+  <title>ERROR 404: SITE NOT FOUND</title>
+</head>
+<body>
+
+<?php
+  $page = 'error404';
+  include ('headernav_prototype.php');
+?>
+
+    <main role="main">
+      <div class='container'>
+        <h1 class="text-center pt-4">ERROR 404: PAGE NOT FOUND</h1>
+        <div>
+          <!-- error 404 image -->
+          <img src='/students/mwerner2/groupproject/images/error_404_img.jpg' class="img-fluid" alt = "error 404 image">
+        </div>
+        <h3 class="pb-2">The page you are looking for does not exist. Maybe you were looking for one of these pages?</h3>
+        <ul>
+          <li><a href='/students/mwerner2/groupproject/course_home.html'>Course Home</a></li>
+          <li><a href='/students/mwerner2/groupproject/lecture1.html'>Lecture 1</a></li>
+          <li><a href='/students/mwerner2/groupproject/lecture2.html'>Lecture 2</a></li>
+          <li><a href='/students/mwerner2/groupproject/lecture3.html'>Lecture 3</a></li>
+        </ul>
+
+      </div>
+      
+
+<!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="d-flex justify-content-around p-5 bg-dark">
+          <div class="d-flex flex-column pl-5 pr-5">
+            <p class="d-flex align-items-center m-0 text-white font-weight-bold">Lectures</p>
+            <a href="/students/mwerner2/groupproject/lecture1.html">Lecture 1</a>
+            <a href="/students/mwerner2/groupproject/lecture2.html">Lecture 2</a>
+            <a href="/students/mwerner2/groupproject/lecture3.html">Lecture 3</a>
+          </div>
+          <div class="d-flex flex-column pl-5 pr-5">
+            <a href="/students/mwerner2/groupproject/course_home.html">Course Home</a>
+            <a href="#">About</a>
+            <a href="#">Resources</a>
+          </div>
+        </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>
