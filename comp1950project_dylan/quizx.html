@@ -14,12 +14,17 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous">
 </script>
-  <script type="text/javascript" src="/students/shulme2/groupproject/js/jquery.goup.min.js"></script>
    <script src="/students/shulme2/groupproject/js/hmwk6_js.js"></script>
    <script>
-     function validateForm() {
-      alert("Thank you for submitting the quiz. You will now be taken back to the lecture page");
-      return false;
+     function valthisform() {
+        
+        var chkd = document.quiz_form.c1.checked || document.quiz_form.c2.checked||document.quiz_form.c3.checked|| document.quiz_form.c4.checked;
+
+        if (chkd == true){
+            confirm("Are you sure you want to submit this quiz?");
+        } else {
+            alert ("please check a checkbox")
+        }
     }
    </script>
   <?php include ('commonhead.php');?>
@@ -28,7 +33,6 @@ crossorigin="anonymous">
   <title>QUIZ X</title>
 </head>
 <body>
-</head>
 
 <?php
   $page = 'quiz1';
@@ -43,7 +47,7 @@ crossorigin="anonymous">
       </div>
 
       <div class="container">
-        <form name="quiz_form" action="/students/shulme2/groupproject/lecture1.html" onsubmit="return confirm('Do you really want to submit the form?');" method="post">
+        <form name="quiz_form" action="/students/shulme2/groupproject/lecture1.html"  method="post">
           <div class="form-group pb-3">
             <div class="form-row">
               <div class="col">
@@ -118,14 +122,17 @@ crossorigin="anonymous">
             <p>
               Morbi ullamcorper neque at libero suscipit, at hendrerit sem aliquet.
             </p>
-            <input class="form-check-input" type="checkbox" name="q4" id="q4_1">
+            <input class="form-check-input" type="checkbox" name="q4" id="q4_1" value="c1">
             <label class="form-check-label" for="q4_1">Donec iaculis</label>
             <br>
-            <input class="form-check-input" type="checkbox" name="q4" id="q4_2">
+            <input class="form-check-input" type="checkbox" name="q4" id="q4_2" value="c2">
             <label class="form-check-label" for="q4_2">Vestibulum vehicula</label>
             <br>
-            <input class="form-check-input" type="checkbox" name="q4" id="q4_3">
+            <input class="form-check-input" type="checkbox" name="q4" id="q4_3" value="c3">
             <label class="form-check-label" for="q4_3">Quisque urna</label>
+            <br>
+            <input class="form-check-input" type="checkbox" name="q6" id="q6_4" value="c4">
+            <label class="form-check-label" for="q6_4">Proin porttitor neque</label>
             <br>
           </div>
 
@@ -153,21 +160,21 @@ crossorigin="anonymous">
             <p>
               Morbi ullamcorper neque at libero suscipit, at hendrerit sem aliquet.
             </p>
-            <input class="form-check-input" type="checkbox" name="q6" id="q6_1">
+            <input class="form-check-input" type="checkbox" name="q6" id="q6_1" value="c1">
             <label class="form-check-label" for="q6_1">Donec iaculis</label>
             <br>
-            <input class="form-check-input" type="checkbox" name="q6" id="q6_2">
+            <input class="form-check-input" type="checkbox" name="q6" id="q6_2" value="c2">
             <label class="form-check-label" for="q6_2">Vestibulum vehicula</label>
             <br>
-            <input class="form-check-input" type="checkbox" name="q6" id="q6_3">
+            <input class="form-check-input" type="checkbox" name="q6" id="q6_3" value="c3">
             <label class="form-check-label" for="q6_3">Quisque urna</label>
             <br>
-            <input class="form-check-input" type="checkbox" name="q6" id="q6_4">
+            <input class="form-check-input" type="checkbox" name="q6" id="q6_4" value="c4">
             <label class="form-check-label" for="q6_4">Proin porttitor neque</label>
             <br>
           </div>
           <div class="text-center">
-            <input type="submit" value="Submit Quiz" class="btn btn-primary">
+            <input type="submit" value="Submit Quiz" class="btn btn-primary btn-lg" onClick = "valthisform();">
           </div>
         </form>
 
